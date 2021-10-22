@@ -33,7 +33,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  * @author Yonel Ceruto <yonelceruto@gmail.com>
  */
-class Post
+class Post implements \JsonSerializable
 {
     /**
      * @var int
@@ -222,5 +222,19 @@ class Post
     public function getTags(): Collection
     {
         return $this->tags;
+    }
+
+    public function jsonSerialize()
+    {
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'slug' => $this->slug,
+            'summary' => $this->summary,
+            'publishedAt' => $this->publishedAt,
+            'author' => $this->author,
+            'comments' => $this->comments,
+            'tags' => $this->tags,
+        ];
     }
 }

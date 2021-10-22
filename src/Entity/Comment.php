@@ -28,7 +28,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
  */
-class Comment
+class Comment implements \JsonSerializable
 {
     /**
      * @var int
@@ -134,5 +134,15 @@ class Comment
     public function setPost(Post $post): void
     {
         $this->post = $post;
+    }
+
+    public function jsonSerialize()
+    {
+        return [
+            'id' => $this->id,
+            'content' => $this->content,
+            'publishedAt' => $this->publishedAt,
+            'author' => $this->author,
+        ];
     }
 }
