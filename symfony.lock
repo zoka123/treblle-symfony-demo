@@ -572,6 +572,15 @@
             "config/packages/html_sanitizer.yaml"
         ]
     },
+    "thecodingmachine/safe": {
+        "version": "v1.3.3"
+    },
+    "treblle/treblle-php": {
+        "version": "v2.x-dev"
+    },
+    "treblle/treblle-symfony": {
+        "version": "v1.x-dev"
+    },
     "twig/extra-bundle": {
         "version": "v3.3.1"
     },

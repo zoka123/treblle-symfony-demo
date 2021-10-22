@@ -3,7 +3,7 @@
     "license": "MIT",
     "type": "project",
     "description": "Symfony Demo Application",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "replace": {
         "symfony/polyfill-php72": "*",
@@ -39,6 +39,7 @@
         "symfony/webpack-encore-bundle": "^1.4",
         "symfony/yaml": "^5.3",
         "tgalopin/html-sanitizer-bundle": "^1.2",
+        "treblle/treblle-symfony": "^1.0",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/intl-extra": "^3.0",
         "twig/markdown-extra": "^3.0",
