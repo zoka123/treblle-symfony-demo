@@ -45,10 +45,31 @@ class ApiController extends AbstractController
     }
 
     /**
-     * @Route("/posts/{id}", methods="GET", name="blog_post")
+     * @Route("/posts/{id}", methods="GET")
      */
     public function postShow(Post $post): Response
     {
+        return new JsonResponse($post);
+    }
+
+    /**
+     * @Route("/posts/{id}/warning", methods="GET")
+     */
+    public function postWarning(Post $post): Response
+    {
+        $a = [];
+        $a[1];
+
+        return new JsonResponse($post);
+    }
+
+    /**
+     * @Route("/posts/{id}/error", methods="GET")
+     */
+    public function postError(Post $post): Response
+    {
+        trigger_error('My error');
+
         return new JsonResponse($post);
     }
 }
